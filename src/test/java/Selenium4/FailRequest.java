@@ -1,0 +1,58 @@
+package Selenium4;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.devtools.DevTools;
+import org.openqa.selenium.devtools.v118.fetch.model.RequestPattern;
+import org.openqa.selenium.devtools.v118.network.model.ErrorReason;
+import org.testng.annotations.Test;
+import org.openqa.selenium.devtools.v118.fetch.Fetch;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class FailRequest {
+
+
+	@Test
+	public void reqFail() {
+
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+
+		WebDriverManager.chromedriver().setup();
+		ChromeDriver driver = new ChromeDriver(options);
+
+		DevTools devTools = driver.getDevTools();
+		devTools.createSession();
+
+		List<RequestPattern> requestPattern = Arrays.asList(new RequestPattern(
+				Optional.of("*GetBook*"), 
+				Optional.empty(), 
+				Optional.empty()
+				));
+
+		devTools.send(Fetch.enable(Optional.of(requestPattern), Optional.empty()));
+		devTools.addListener(Fetch.requestPaused(), request -> {
+
+			devTools.send(Fetch.failRequest(request.getRequestId(), ErrorReason.FAILED));
+		});
+
+		driver.get("https://rahulshettyacademy.com/angularAppdemo/");
+		driver.findElement(By.cssSelector("button[routerlink='/library']")).click();
+
+		int rowSize = driver.findElements(By.cssSelector("table tr")).size();
+		if(rowSize == 1) {
+			System.out.println("Row Count :"+rowSize);
+		}
+
+		devTools.disconnectSession();
+		driver.close();
+	}
+
+}

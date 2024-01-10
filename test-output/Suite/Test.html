@@ -1,0 +1,330 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>50/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 10 19:00:26 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>1022 seconds (1022153 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Selenium4.BasicAuthentication.BasicAuth()'><b>BasicAuth</b><br>Test class: Selenium4.BasicAuthentication</td>
+<td></td>
+<td>23</td>
+<td>Selenium4.BasicAuthentication@46268f08</td></tr>
+<tr>
+<td title='WaitSynchronization.ExplicitWait.explicitWait()'><b>explicitWait</b><br>Test class: WaitSynchronization.ExplicitWait</td>
+<td></td>
+<td>24</td>
+<td>WaitSynchronization.ExplicitWait@39fcbef6</td></tr>
+<tr>
+<td title='Deque.Array_Deque.arrayDeque()'><b>arrayDeque</b><br>Test class: Deque.Array_Deque</td>
+<td></td>
+<td>0</td>
+<td>Deque.Array_Deque@1e0f9063</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithHashMap.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppWithHashMap<br>Parameters: {password=Satz@984, product=IPHONE 13 PRO, username=sathishsuresh984@gmail.com}</td>
+<td></td>
+<td>34</td>
+<td>ClientApplication.POMClientAppWithHashMap@7502291e</td></tr>
+<tr>
+<td title='Selenium4.HandlePopupByUrl.handlePopup()'><b>handlePopup</b><br>Test class: Selenium4.HandlePopupByUrl</td>
+<td></td>
+<td>17</td>
+<td>Selenium4.HandlePopupByUrl@3212a8d7</td></tr>
+<tr>
+<td title='Selenium4.BlockRequest.BlockImageRequest()'><b>BlockImageRequest</b><br>Test class: Selenium4.BlockRequest</td>
+<td></td>
+<td>4</td>
+<td>Selenium4.BlockRequest@eda25e5</td></tr>
+<tr>
+<td title='Selenium4.GetNetworkLog.getNetworkLogs()'><b>getNetworkLogs</b><br>Test class: Selenium4.GetNetworkLog</td>
+<td></td>
+<td>20</td>
+<td>Selenium4.GetNetworkLog@1852a3ff</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppEnd2EndFlow.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppEnd2EndFlow</td>
+<td></td>
+<td>36</td>
+<td>ClientApplication.POMClientAppEnd2EndFlow@76012793</td></tr>
+<tr>
+<td title='Selenium4.NetworkSpeed.changeNetworkSpeed()'><b>changeNetworkSpeed</b><br>Test class: Selenium4.NetworkSpeed</td>
+<td></td>
+<td>21</td>
+<td>Selenium4.NetworkSpeed@25bfcafd</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppDataProvider.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppDataProvider<br>Parameters: sathishsuresh984@gmail.com, Satz@984, IPHONE 13 PRO</td>
+<td></td>
+<td>33</td>
+<td>ClientApplication.POMClientAppDataProvider@4dd02341</td></tr>
+<tr>
+<td title='Miscellaneous.Cookies.addCookies()'><b>addCookies</b><br>Test class: Miscellaneous.Cookies</td>
+<td></td>
+<td>43</td>
+<td>Miscellaneous.Cookies@79351f41</td></tr>
+<tr>
+<td title='SortedSet.Tree_Set.treeSet()'><b>treeSet</b><br>Test class: SortedSet.Tree_Set</td>
+<td></td>
+<td>0</td>
+<td>SortedSet.Tree_Set@5cde6747</td></tr>
+<tr>
+<td title='ClientApplication.ClientAppEnd2EndFlow.OrderPurchase()'><b>OrderPurchase</b><br>Test class: ClientApplication.ClientAppEnd2EndFlow</td>
+<td></td>
+<td>24</td>
+<td>ClientApplication.ClientAppEnd2EndFlow@635572a7</td></tr>
+<tr>
+<td title='Queue.Priority_Queue.priorityQueue()'><b>priorityQueue</b><br>Test class: Queue.Priority_Queue</td>
+<td></td>
+<td>0</td>
+<td>Queue.Priority_Queue@53bd8fca</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithJSON.VerifyOrder()'><b>VerifyOrder</b><br>Test class: ClientApplication.POMClientAppWithJSON</td>
+<td></td>
+<td>13</td>
+<td>ClientApplication.POMClientAppWithJSON@79d94571</td></tr>
+<tr>
+<td title='Selenium4.PartialScreenshot.screenshotPartial()'><b>screenshotPartial</b><br>Test class: Selenium4.PartialScreenshot</td>
+<td></td>
+<td>6</td>
+<td>Selenium4.PartialScreenshot@55dfcc6</td></tr>
+<tr>
+<td title='List.Linked.linkedList()'><b>linkedList</b><br>Test class: List.Linked</td>
+<td></td>
+<td>0</td>
+<td>List.Linked@74c79fa2</td></tr>
+<tr>
+<td title='Selenium4.GetConsoleLogs.getConsoleLogs()'><b>getConsoleLogs</b><br>Test class: Selenium4.GetConsoleLogs</td>
+<td></td>
+<td>19</td>
+<td>Selenium4.GetConsoleLogs@93cf163</td></tr>
+<tr>
+<td title='Selenium4.WindowHandle.handleChildFrame()'><b>handleChildFrame</b><br>Test class: Selenium4.WindowHandle</td>
+<td></td>
+<td>29</td>
+<td>Selenium4.WindowHandle@7a1a3478</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppDataProvider.VerifyOrder()'><b>VerifyOrder</b><br>Test class: ClientApplication.POMClientAppDataProvider</td>
+<td></td>
+<td>1</td>
+<td>ClientApplication.POMClientAppDataProvider@4dd02341</td></tr>
+<tr>
+<td title='Scrolling.WindowScrolling.scrolling()'><b>scrolling</b><br>Test class: Scrolling.WindowScrolling</td>
+<td></td>
+<td>41</td>
+<td>Scrolling.WindowScrolling@2fc6f97f</td></tr>
+<tr>
+<td title='Stream.Filter.filter()'><b>filter</b><br>Test class: Stream.Filter</td>
+<td></td>
+<td>0</td>
+<td>Stream.Filter@67304a40</td></tr>
+<tr>
+<td title='Selenium4.CDPCommandTest.SetEmulation()'><b>SetEmulation</b><br>Test class: Selenium4.CDPCommandTest</td>
+<td></td>
+<td>9</td>
+<td>Selenium4.CDPCommandTest@495b0487</td></tr>
+<tr>
+<td title='Stream.StreamConcat.streamConcat()'><b>streamConcat</b><br>Test class: Stream.StreamConcat</td>
+<td></td>
+<td>0</td>
+<td>Stream.StreamConcat@6179e425</td></tr>
+<tr>
+<td title='Set.Hash_Set.hashSet()'><b>hashSet</b><br>Test class: Set.Hash_Set</td>
+<td></td>
+<td>0</td>
+<td>Set.Hash_Set@7642df8f</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithJSON.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppWithJSON<br>Parameters: {password=Satz@984, product=ADIDAS ORIGINAL, username=sathishsuresh984@gmail.com}</td>
+<td></td>
+<td>31</td>
+<td>ClientApplication.POMClientAppWithJSON@79d94571</td></tr>
+<tr>
+<td title='Stream.JavaStream.stream()'><b>stream</b><br>Test class: Stream.JavaStream</td>
+<td></td>
+<td>0</td>
+<td>Stream.JavaStream@2d6764b2</td></tr>
+<tr>
+<td title='Selenium4.MobileEmulator.emulatorMobile()'><b>emulatorMobile</b><br>Test class: Selenium4.MobileEmulator</td>
+<td></td>
+<td>23</td>
+<td>Selenium4.MobileEmulator@7cf6a5f9</td></tr>
+<tr>
+<td title='List.VectorList.vectorList()'><b>vectorList</b><br>Test class: List.VectorList</td>
+<td></td>
+<td>0</td>
+<td>List.VectorList@13d73fa</td></tr>
+<tr>
+<td title='Set.Linked_HashSet.linkedHashSet()'><b>linkedHashSet</b><br>Test class: Set.Linked_HashSet</td>
+<td></td>
+<td>0</td>
+<td>Set.Linked_HashSet@3e30646a</td></tr>
+<tr>
+<td title='WaitSynchronization.FluentWaitClass.fluentWait()'><b>fluentWait</b><br>Test class: WaitSynchronization.FluentWaitClass</td>
+<td></td>
+<td>20</td>
+<td>WaitSynchronization.FluentWaitClass@66565121</td></tr>
+<tr>
+<td title='Miscellaneous.BrokenLink.brokenLink()'><b>brokenLink</b><br>Test class: Miscellaneous.BrokenLink</td>
+<td></td>
+<td>62</td>
+<td>Miscellaneous.BrokenLink@6399551e</td></tr>
+<tr>
+<td title='Selenium4.FailRequest.reqFail()'><b>reqFail</b><br>Test class: Selenium4.FailRequest</td>
+<td></td>
+<td>18</td>
+<td>Selenium4.FailRequest@7203c7ff</td></tr>
+<tr>
+<td title='Miscellaneous.TakeScreenshot.getScreenshot()'><b>getScreenshot</b><br>Test class: Miscellaneous.TakeScreenshot</td>
+<td></td>
+<td>33</td>
+<td>Miscellaneous.TakeScreenshot@1c32386d</td></tr>
+<tr>
+<td title='Selenium4.SetGeoLocation.geoLocation()'><b>geoLocation</b><br>Test class: Selenium4.SetGeoLocation</td>
+<td></td>
+<td>29</td>
+<td>Selenium4.SetGeoLocation@222eb8aa</td></tr>
+<tr>
+<td title='Selenium4.GetDimension.getDimension()'><b>getDimension</b><br>Test class: Selenium4.GetDimension</td>
+<td></td>
+<td>11</td>
+<td>Selenium4.GetDimension@2a76840c</td></tr>
+<tr>
+<td title='Stream.Collector.collectList()'><b>collectList</b><br>Test class: Stream.Collector</td>
+<td></td>
+<td>0</td>
+<td>Stream.Collector@3d2ee678</td></tr>
+<tr>
+<td title='Stream.StreamDistinct.streamDistinct()'><b>streamDistinct</b><br>Test class: Stream.StreamDistinct</td>
+<td></td>
+<td>0</td>
+<td>Stream.StreamDistinct@6fe1b4fb</td></tr>
+<tr>
+<td title='Stream.Limit.limit()'><b>limit</b><br>Test class: Stream.Limit</td>
+<td></td>
+<td>0</td>
+<td>Stream.Limit@49c6c24f</td></tr>
+<tr>
+<td title='WaitSynchronization.ImplicitWait.implicitWait()'><b>implicitWait</b><br>Test class: WaitSynchronization.ImplicitWait</td>
+<td></td>
+<td>21</td>
+<td>WaitSynchronization.ImplicitWait@623e088f</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithHashMap.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppWithHashMap<br>Parameters: {password=Satz@984, product=ADIDAS ORIGINAL, username=sathishsuresh984@gmail.com}</td>
+<td></td>
+<td>35</td>
+<td>ClientApplication.POMClientAppWithHashMap@7502291e</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppEnd2EndFlow.VerifyOrder()'><b>VerifyOrder</b><br>Test class: ClientApplication.POMClientAppEnd2EndFlow</td>
+<td></td>
+<td>14</td>
+<td>ClientApplication.POMClientAppEnd2EndFlow@76012793</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppDataProvider.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppDataProvider<br>Parameters: sathishsuresh984@gmail.com, Satz@984, ADIDAS ORIGINAL</td>
+<td></td>
+<td>31</td>
+<td>ClientApplication.POMClientAppDataProvider@4dd02341</td></tr>
+<tr>
+<td title='List.Array.arrayList()'><b>arrayList</b><br>Test class: List.Array</td>
+<td></td>
+<td>0</td>
+<td>List.Array@5023bb8b</td></tr>
+<tr>
+<td title='Selenium4.RelativeLocators.relativeLocator()'><b>relativeLocator</b><br>Test class: Selenium4.RelativeLocators</td>
+<td></td>
+<td>10</td>
+<td>Selenium4.RelativeLocators@71454b9d</td></tr>
+<tr>
+<td title='List.StackList.stackList()'><b>stackList</b><br>Test class: List.StackList</td>
+<td></td>
+<td>0</td>
+<td>List.StackList@5d5f10b2</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithHashMap.VerifyOrder()'><b>VerifyOrder</b><br>Test class: ClientApplication.POMClientAppWithHashMap</td>
+<td></td>
+<td>16</td>
+<td>ClientApplication.POMClientAppWithHashMap@7502291e</td></tr>
+<tr>
+<td title='ClientApplication.POMClientAppWithJSON.purchaseOrder()'><b>purchaseOrder</b><br>Test class: ClientApplication.POMClientAppWithJSON<br>Parameters: {password=Satz@984, product=IPHONE 13 PRO, username=sathishsuresh984@gmail.com}</td>
+<td></td>
+<td>33</td>
+<td>ClientApplication.POMClientAppWithJSON@79d94571</td></tr>
+<tr>
+<td title='Stream.Map.mapStream()'><b>mapStream</b><br>Test class: Stream.Map</td>
+<td></td>
+<td>0</td>
+<td>Stream.Map@35f26e72</td></tr>
+<tr>
+<td title='Selenium4.MockRequest.mockReq()'><b>mockReq</b><br>Test class: Selenium4.MockRequest</td>
+<td></td>
+<td>17</td>
+<td>Selenium4.MockRequest@4b6690c0</td></tr>
+</table><p>
+</body>
+</html>

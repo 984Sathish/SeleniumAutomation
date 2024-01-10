@@ -8,6 +8,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -21,9 +22,13 @@ public class ClientAppEnd2EndFlow {
 	@Test
 	public void OrderPurchase() throws InterruptedException{
 
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+		
 		//web driver setup
 		WebDriverManager.chromedriver().setup();
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver(options);
 
 		//max window
 		driver.manage().window().maximize();

@@ -8,6 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+
 import Utils.AbstractComponent;
 
 public class OrdersPage extends AbstractComponent{
@@ -26,7 +27,6 @@ public class OrdersPage extends AbstractComponent{
 
 	@FindBy(css = "tbody tr")
 	List<WebElement> table;
-
 
 
 	public void verifyProduct(String orderId, String productName) {

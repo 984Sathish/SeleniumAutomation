@@ -35,6 +35,7 @@ public class AddExtension {
 
 		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		
+		driver.close();
 		
 	}
 }

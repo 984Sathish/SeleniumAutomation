@@ -4,17 +4,24 @@ import java.util.Optional;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v118.fetch.Fetch;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MockRequest {
 
-	public static void main(String[] args) throws InterruptedException {
+	@Test
+	public void mockReq() throws InterruptedException {
+
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
 
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver driver = new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver(options);
 
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();

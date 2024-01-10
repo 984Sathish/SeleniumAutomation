@@ -4,10 +4,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
+
+import org.testng.annotations.Test;
 	
 public class JavaStream {
 
-	public static void main(String[] args) {
+	@Test
+	public void stream() {
+		
 
 		//create list
 		List<Integer> asList = Arrays.asList(9, 2, 5, 4, 1);

@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.Set;
 import java.util.stream.Stream;
 
+import org.testng.annotations.Test;
+
 public class Hash_Set {
 
 	/**
@@ -16,7 +18,8 @@ public class Hash_Set {
 	 * 6.HashSet is used for avoiding duplicate data and to find value with the fast method.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void hashSet() {
 
 		HashSet<String> hashSet = new HashSet<>();
 

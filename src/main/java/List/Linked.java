@@ -2,6 +2,8 @@ package List;
 
 import java.util.LinkedList;
 
+import org.testng.annotations.Test;
+
 public class Linked {
 
 	/*
@@ -13,7 +15,8 @@ public class Linked {
 	 * 
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void linkedList() {
 
 		//creating linked list
 		LinkedList<String> linkedList = new LinkedList<String>();

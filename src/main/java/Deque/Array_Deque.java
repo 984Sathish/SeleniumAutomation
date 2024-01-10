@@ -3,6 +3,8 @@ package Deque;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
+import org.testng.annotations.Test;
+
 public class Array_Deque {
 
 	/*
@@ -10,7 +12,8 @@ public class Array_Deque {
 	 * 2.Allows users to add or remove an element from both sides of the queue.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void arrayDeque() {
 		
 		//implementation of the Deque interface
 		Deque<String> arrDeque = new ArrayDeque<>();

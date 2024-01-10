@@ -3,6 +3,8 @@ package Set;
 import java.util.LinkedHashSet;
 import java.util.Spliterator;
 
+import org.testng.annotations.Test;
+
 public class Linked_HashSet {
 
 	/*
@@ -12,7 +14,8 @@ public class Linked_HashSet {
 
 	static int i = 1;
 
-	public static void main(String[] args) {
+	@Test
+	public void linkedHashSet() {
 
 		LinkedHashSet<String> linkHset = new LinkedHashSet<>();
 

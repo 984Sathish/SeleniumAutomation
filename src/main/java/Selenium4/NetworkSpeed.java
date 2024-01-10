@@ -4,19 +4,26 @@ import java.util.Optional;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.v118.network.model.ConnectionType;
+import org.testng.annotations.Test;
 import org.openqa.selenium.devtools.v118.network.Network;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class NetworkSpeed {
 	
-	public static void main(String[] args) {
+	@Test
+	public void changeNetworkSpeed() {
+
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
 
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver driver = new ChromeDriver();
-
+		ChromeDriver driver = new ChromeDriver(options);
+		
 		DevTools devTools = driver.getDevTools();
 		devTools.createSession();
 		

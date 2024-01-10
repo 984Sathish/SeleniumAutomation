@@ -3,6 +3,8 @@ package Queue;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+import org.testng.annotations.Test;
+
 public class Priority_Queue {
 
 	/*
@@ -12,11 +14,12 @@ public class Priority_Queue {
 	 *  an element with a maximum ASCII value will have the highest priority.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void priorityQueue() {
 
 		//implementation of the Queue interface
 		Queue<String> pQueue = new PriorityQueue<>();
-		
+
 		pQueue.add("Home");
 		pQueue.add("Gym");
 		pQueue.add("Road");
@@ -27,7 +30,7 @@ public class Priority_Queue {
 		System.out.println("Created PriorityQueue(Sorted based on mas ASCII value) : "+pQueue +"\n");
 
 		System.out.println("Top element of PriorityQueue using peek(): "+pQueue.peek() +"\n");
-		
+
 		System.out.println("Top element of PriorityQueue using element(): "+pQueue.element() +"\n");
 
 		System.out.println("Removing top element in PriorityQueue: "+pQueue.poll() +"\n");
@@ -59,7 +62,7 @@ public class Priority_Queue {
 		aq.add("w");
 		aq.add("o");
 		System.out.println("Alphabets Queue: "+aq +"\n");
-		
+
 
 	}
 

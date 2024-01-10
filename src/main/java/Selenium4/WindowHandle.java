@@ -7,19 +7,23 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class WindowHandle {
 
-	public static void main(String[] args) {
+	@Test
+	public void handleChildFrame() {
 
-
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
 
 		WebDriverManager.chromedriver().setup();
-
-		WebDriver driver = new ChromeDriver();
-
+		ChromeDriver driver = new ChromeDriver(options);
+		
 		driver.get("https://rahulshettyacademy.com/angularpractice/");
 
 		driver.switchTo().newWindow(WindowType.WINDOW);      //new window open

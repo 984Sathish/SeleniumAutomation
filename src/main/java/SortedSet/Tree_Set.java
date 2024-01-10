@@ -3,6 +3,8 @@ package SortedSet;
 import java.util.Iterator;
 import java.util.TreeSet;
 
+import org.testng.annotations.Test;
+
 public class Tree_Set {
 
 	/*
@@ -11,7 +13,8 @@ public class Tree_Set {
 	 * 3.The elements in TreeSet stored in ascending order.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void treeSet() {
 
 		TreeSet<String> treeSet = new TreeSet<>();
 

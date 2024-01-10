@@ -2,15 +2,22 @@ package Selenium4;
 
 import org.openqa.selenium.By;	
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class HandlePopupByUrl {
 	
-	public static void main(String[] args) throws InterruptedException {
-		
+	@Test
+	public void handlePopup() throws InterruptedException {
+
+		//set headless
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--headless=new");
+
 		WebDriverManager.chromedriver().setup();
-		ChromeDriver driver = new ChromeDriver();
+		ChromeDriver driver = new ChromeDriver(options);
 		
 		// Original url --> http://the-internet.herokuapp.com/
 		

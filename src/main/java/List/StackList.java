@@ -2,6 +2,8 @@ package List;
 
 import java.util.Stack;
 
+import org.testng.annotations.Test;
+
 public class StackList {
 
 	/*
@@ -9,7 +11,8 @@ public class StackList {
 	 * It extends the Vector class to allow for easy implementation of the stack data structure.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void stackList() {
 
 		//creating stack
 		Stack<String> stack = new Stack<String>();

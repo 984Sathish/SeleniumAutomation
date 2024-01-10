@@ -4,10 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
+import org.testng.annotations.Test;
+
 public class StreamConcat {
 	
-	public static void main(String[] args) {
-		
+	@Test
+	public void streamConcat() {	
 		/*
 		 * concat method is used for merge two list by using stream.
 		 */

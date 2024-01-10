@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
 
+import org.testng.annotations.Test;
+
 public class Array {
 
 	/*
@@ -12,7 +14,8 @@ public class Array {
 	 * If the array is not big enough, a new, larger array is created to replace the old one and the old one is removed.
 	 */
 
-	public static void main(String[] args) {
+	@Test
+	public void arrayList() {
 
 		//creating Array list
 		ArrayList<String> arrayList = new ArrayList<String>();

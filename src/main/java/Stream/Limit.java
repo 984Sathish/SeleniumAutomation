@@ -2,9 +2,12 @@ package Stream;
 
 import java.util.stream.Stream;
 
+import org.testng.annotations.Test;
+
 public class Limit {
 
-	public static void main(String[] args) {
+	@Test
+	public void limit() {
 		
 		/*
 		 * Limit is used for limit the result once we get the value from the filter.

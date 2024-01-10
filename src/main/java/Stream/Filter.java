@@ -2,9 +2,12 @@ package Stream;
 
 import java.util.stream.Stream;
 
+import org.testng.annotations.Test;
+
 public class Filter {
 
-	public static void main(String[] args) {
+	@Test
+	public void filter() {
 
 		/*
 		 * Filter is perform action with change the list size.

@@ -1,13 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<listeners>
+		<listener class-name="TestComponent.Listeners"></listener>
+	</listeners>
   <test thread-count="5" name="Test">
     <classes>
+		
+		<!-- Selenium Framework suite-->
       <class name="ClientApplication.POMClientAppWithHashMap"/>
       <class name="ClientApplication.POMClientAppEnd2EndFlow"/>
       <class name="ClientApplication.ClientAppEnd2EndFlow"/>
       <class name="ClientApplication.POMClientAppWithJSON"/>
       <class name="ClientApplication.POMClientAppDataProvider"/>
+      
+      <!-- Selenium 4 suite -->
+      <class name="Selenium4.HandlePopupByUrl"/>
+      <class name="Selenium4.WindowHandle"/>
+      <class name="Selenium4.CDPCommandTest"/>
+      <class name="Selenium4.PartialScreenshot"/>
+      <class name="Selenium4.SetGeoLocation"/>
+      <class name="Selenium4.GetConsoleLogs"/>
+      <class name="Selenium4.GetNetworkLog"/>
+      <class name="Selenium4.FailRequest"/>
+      <class name="Selenium4.NetworkSpeed"/>
+      <class name="Selenium4.MockRequest"/>
+      <class name="Selenium4.BasicAuthentication"/>
+      <class name="Selenium4.GetDimension"/>
+      <class name="Selenium4.RelativeLocators"/>
+      <class name="Selenium4.BlockRequest"/>
+      <class name="Selenium4.MobileEmulator"/>
+      
+      <!-- Selenium Waits suite-->
+      <class name="WaitSynchronization.ImplicitWait"/>
+      <class name="WaitSynchronization.ExplicitWait"/>
+      <class name="WaitSynchronization.FluentWaitClass"/>
+      
+      <!-- Window Scrolling-->
+      <class name="Scrolling.WindowScrolling"/>
+
+	  <!--Stream in java -->
+	  <class name="Stream.Collector"/>
+      <class name="Stream.StreamConcat"/>
+      <class name="Stream.Map"/>
+      <class name="Stream.JavaStream"/>
+      <class name="Stream.Filter"/>
+      <class name="Stream.Limit"/>
+      <class name="Stream.StreamDistinct"/>
+      
+      <!--Miscellaneous in selenium -->
+      <class name="Miscellaneous.Cookies"/>
+      <class name="Miscellaneous.TakeScreenshot"/>
+      <class name="Miscellaneous.BrokenLink"/>
+      
+      <!-- Java collection-->
+      <class name="List.VectorList"/>
+      <class name="List.Array"/>
+      <class name="List.StackList"/>
+      <class name="List.Linked"/>
+      <class name="Deque.Array_Deque"/>
+      <class name="Queue.Priority_Queue"/>
+      <class name="Set.Hash_Set"/>
+      <class name="Set.Linked_HashSet"/>
+      <class name="SortedSet.Tree_Set"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

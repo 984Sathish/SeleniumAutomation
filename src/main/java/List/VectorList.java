@@ -3,6 +3,8 @@ package List;
 import java.util.Iterator;
 import java.util.Vector;
 
+import org.testng.annotations.Test;
+
 public class VectorList {
 
 	/**
@@ -14,8 +16,9 @@ public class VectorList {
 	 *and due to this, it gives a poor performance in adding, searching, deleting, and updating its elements.
 	 */
 
-	public static void main(String[] args) {
-
+	@Test
+	public void vectorList() {
+		
 		Vector<String> vector = new Vector<String>(6);
 		vector.add("Home");
 		vector.add("Office");

@@ -11,12 +11,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+//Auto IT is need some software. That is not installed due to security issue.
+
 public class FileUpload {
 
-	public static void main(String[] args) throws InterruptedException, IOException {
+	@Test(enabled = false)
+	public void autoITUpload() throws InterruptedException, IOException {
 
 		//get user directory
 		String downloadPath=System.getProperty("user.dir");

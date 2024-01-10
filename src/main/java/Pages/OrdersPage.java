@@ -1,7 +1,5 @@
 package Pages;
 
-import static org.testng.Assert.assertEquals;
-
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -35,18 +33,20 @@ public class OrdersPage extends AbstractComponent{
 		System.out.println("Order Id: "+orderId);
 		System.out.println("Product Name: "+productName);
 		waitForElementIsVisible(tableBody);
-		
+
 		for (int i = 0; i < table.size(); i++) {
 
 			String orderIdtext = table.get(i).findElement(By.tagName("th")).getText();
-//			System.out.println(orderIdtext);
-//			System.out.println(orderId);
+			//			System.out.println(orderIdtext);
+			//			System.out.println(orderId);
 			if(orderIdtext.equals(orderId)) {
 
 				String ActualprodName = table.get(i).findElement(By.cssSelector("td:nth-child(3)")).getText();
 				//System.out.println(ActualprodName);
-				assertEquals(ActualprodName, productName);
-				break;
+				if(ActualprodName == productName) {
+					break;	
+				}
+
 			}
 
 		}

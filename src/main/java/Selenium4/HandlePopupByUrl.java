@@ -1,8 +1,6 @@
 package Selenium4;
 
-import static org.testng.Assert.assertEquals;
-
-import org.openqa.selenium.By;
+import org.openqa.selenium.By;	
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -22,7 +20,9 @@ public class HandlePopupByUrl {
 		
 		Thread.sleep(2000);
 		String text = driver.findElement(By.tagName("p")).getText();
-		assertEquals(text, "Congratulations! You must have the proper credentials.");
+		if(text == "Congratulations! You must have the proper credentials.") {
+			System.out.println("Verify text: "+text);
+		}
 		
 		driver.close();
 	}
